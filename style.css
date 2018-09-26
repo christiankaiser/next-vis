@@ -1,0 +1,51 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0 15px;
+  overflow: hidden;
+}
+
+h1 {
+  margin: 10px 0 0 0;
+}
+.vis-wrapper {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 40px);
+}
+
+.controls {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: calc(100% - 20px);
+  overflow-y: auto;
+  overflow-x: visible;
+  padding: 15px;
+}
+
+.controls .options {
+  font-size: 70%;
+}
+
+.vis {
+  position: absolute;
+  left: 320px;
+  top: 0;
+  width: calc(100% - 350px);
+  height: calc(100% - 20px);
+  overflow: auto;
+  padding: 15px;
+}
+textarea {
+  width: 100%;
+  height: 200px;
+}
+svg {
+  border: 1px solid #000;
+}
+
+.pcr-app {
+  top: -170px !important;
+  left: -140px;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Next Vis Histogram</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="lib/d3-v4/d3.js"></script>
+  <link rel="stylesheet" type="text/css" href="lib/pickr/dist/pickr.min.css">
+  <script src="lib/pickr/dist/pickr.min.js"></script>
+</head>
+<body>
+  <h1>Create a bar chart</h1>
+  <div class="vis-wrapper">
+    <div class="controls">
+      <p>Paste your data (tab-separated text):</p>
+      <textarea id="data"></textarea>
+      <button onclick="makeVis()">Create</button>
+      <hr>
+      <div class="options">
+        <table>
+          <tr>
+            <td>Separator</td>
+            <td><input id="sep" value="\t" /></td>
+          </tr>
+          <tr>
+            <td>Width (px)</td>
+            <td><input id="width" value="700" /></td>
+          </tr>
+          <tr>
+            <td>Bar height (px)</td>
+            <td><input id="bar-height" value="30" /></td>
+          </tr>
+          <tr>
+            <td>Width labels (px)</td>
+            <td><input id="width-labels" value="150" /></td>
+          </tr>
+          <tr>
+            <td>Color</td>
+            <td><input id="color-bars" value="#3e73a8" /><div class="color-picker"></div></td>
+          </tr>
+          <tr>
+            <td>Delimiter step</td>
+            <td><input id="delim-step" value="auto" /></td>
+          </tr>
+          <tr>
+            <td>Calculate proportions</td>
+            <td><input id="show-proportions" value="1" type="checkbox" /></td>
+          </tr>
+          <tr>
+            <td>Sum for proportions</td>
+            <td><input id="sum-proportions" value="auto" type="text" /></td>
+          </tr>
+          <tr>
+            <td>Number of decimals</td>
+            <td><input id="proportions-decimals" value="1" /></td>
+          </tr>
+          <tr>
+            <td>Calibration width</td>
+            <td><input id="calib-width" value="" /></td>
+          </tr>
+        </table>
+        <button onclick="makeVis()">Update</button>
+      </div>
+      <hr>
+      <p>Download chart:<br>
+        <input id="filename" placeholder="filename.svg" value="chart.svg" />
+        <button onclick="downloadChart()">Download</button>
+    </div>
+    <div id="visArea" class="vis"></div>
+  </div>
+  <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
